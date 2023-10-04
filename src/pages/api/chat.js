@@ -2,6 +2,10 @@
 import axios from 'axios'
 
 export default async function handler (req, res) {
+  
+  console.log('reached api call handler');
+  console.log(process.env.OPENAI_API_KEY);
+  
   const referer = req.headers.referer || req.headers.referrer // get the referer from the request headers
 
   if (req.method !== 'POST') {
@@ -18,7 +22,7 @@ export default async function handler (req, res) {
         'Content-type': 'application/json',
         Authorization: `Bearer ${process.env.OPENAI_API_KEY}`
       }
-
+      console.log('hitting api');
       const response = await axios.post(url, body, { headers: headers })
 
       res.status(200).json(response.data)
