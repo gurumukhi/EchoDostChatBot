@@ -1,4 +1,9 @@
-## Getting Started
+## EchoDost ChatBot
+
+- Made by Ram for WWF-India's ECHO program.
+- URL: https://echo-dost-chat-bot.vercel.app/
+
+## Developers instructions
 
 First, run the development server:
 
