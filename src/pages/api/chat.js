@@ -10,12 +10,12 @@ export default async function handler (req, res) {
   if (req.method !== 'POST') {
           console.log('1');
     res.status(405).json({ message: 'Method should be POST' })
-  } else if (process.env.NODE_ENV !== 'development') {
-    console.log('2');
-    if (!referer || referer !== process.env.APP_URL) {
-      console.log('3');
-      res.status(401).json({ message: 'Unauthorized' })
-    }
+  // } else if (process.env.NODE_ENV !== 'development') {
+  //   console.log('2');
+  //   if (!referer || referer !== process.env.APP_URL) {
+  //     console.log('3');
+  //     res.status(401).json({ message: 'Unauthorized' })
+  //   }
   } else {
     console.log('4');
     try {
